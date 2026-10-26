@@ -7,6 +7,8 @@ export const siteConfig = {
   url: "https://vimsgym.vercel.app",
   phone: "010-0000-0000",
   address: "서울특별시 ○○구 ○○로 00, 0층",
+  // 지도 검색어. 보통 도로명 주소(층수 제외)나 "건물명 + 상호명"이 가장 정확합니다.
+  mapQuery: "서울특별시 ○○구 ○○로 00",
   hours: [
     { label: "평일", value: "06:00 – 24:00" },
     { label: "토요일", value: "08:00 – 22:00" },
@@ -15,7 +17,6 @@ export const siteConfig = {
   links: {
     kakao: "https://pf.kakao.com/",
     instagram: "https://instagram.com/",
-    naverMap: "https://map.naver.com/",
     reservation: "https://booking.naver.com/",
   },
 } as const;

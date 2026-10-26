@@ -1,3 +1,4 @@
+import LocationMap from "@/components/LocationMap";
 import Section from "@/components/Section";
 import { siteConfig } from "@/config/site";
 import { faqs, features, pricing, programs, trainers } from "@/data/content";
@@ -108,22 +109,11 @@ export default function Home() {
 
       <Section id="location" eyebrow="Location" title="오시는 길" className="bg-white/[0.03]">
         <div className="grid gap-8 md:grid-cols-2">
-          {/* TODO: 네이버/카카오 지도 embed 로 교체 */}
-          <div className="flex aspect-video items-center justify-center rounded-2xl bg-white/10 text-white/50">
-            지도 영역
-          </div>
+          <LocationMap />
           <div className="space-y-6">
             <div>
               <h3 className="font-bold">주소</h3>
               <p className="mt-1 text-white/70">{siteConfig.address}</p>
-              <a
-                href={siteConfig.links.naverMap}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-2 inline-block text-sm text-accent underline"
-              >
-                네이버 지도에서 보기
-              </a>
             </div>
             <div>
               <h3 className="font-bold">운영 시간</h3>

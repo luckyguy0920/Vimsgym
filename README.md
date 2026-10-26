@@ -45,7 +45,7 @@ Hero → 소개 → 프로그램 → 트레이너 → 가격 → FAQ → 오시�
 
 | 바꾸고 싶은 것 | 파일 |
 | --- | --- |
-| 상호명·전화·주소·운영시간·카톡/인스타 링크 | `src/config/site.ts` |
+| 상호명·전화·주소·운영시간·카톡/인스타 링크, 지도 검색어(`mapQuery`) | `src/config/site.ts` |
 | 프로그램·트레이너·가격·FAQ 문구 | `src/data/content.ts` |
 | 포인트 컬러 | `src/app/globals.css`의 `--accent` |
 | 사진 | `public/images/`에 넣고 `page.tsx`의 회색 박스(TODO)를 `next/image`로 교체 |
@@ -54,7 +54,7 @@ Hero → 소개 → 프로그램 → 트레이너 → 가격 → FAQ → 오시�
 
 - [ ] 실제 체육관 정보로 `site.ts`, `content.ts` 채우기
 - [ ] 사진 추가 (Hero 배경, 프로그램, 트레이너, 시설 갤러리)
-- [ ] 네이버/카카오 지도 embed
+- [x] 지도 (Google 지도 임베드 + 네이버/카카오맵 버튼, `mapQuery`로 위치 지정)
 - [ ] OG 이미지(`src/app/opengraph-image.png`) 추가
 - [x] 배포 주소(https://vimsgym.vercel.app)를 `site.ts`의 `url`에 반영 (커스텀 도메인 연결 시 다시 변경)
 - [ ] (선택) 상담 신청 폼, 후기 섹션, 네이버 예약 연동
