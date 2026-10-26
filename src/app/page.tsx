@@ -1,18 +1,31 @@
+import Image from "next/image";
 import ConsultationForm from "@/components/ConsultationForm";
 import LocationMap from "@/components/LocationMap";
+import Photo from "@/components/Photo";
 import Section from "@/components/Section";
 import { siteConfig } from "@/config/site";
 import { faqs, features, pricing, programs, reviews, trainers } from "@/data/content";
+import { findGalleryImages, findImage } from "@/lib/images";
 
 export default function Home() {
+  const heroImage = findImage("hero");
+  const gallery = findGalleryImages();
+
   return (
     <>
       {/* Hero */}
       <section
         id="top"
-        className="relative flex min-h-[90vh] items-center bg-[radial-gradient(ellipse_at_top,_#2a2a2a,_#000)] px-4 pt-16 sm:px-6"
+        className="relative flex min-h-[90vh] items-center overflow-hidden bg-[radial-gradient(ellipse_at_top,_#2a2a2a,_#000)] px-4 pt-16 sm:px-6"
       >
-        <div className="mx-auto w-full max-w-6xl">
+        {heroImage && (
+          <>
+            <Image src={heroImage} alt="" fill priority sizes="100vw" className="object-cover" />
+            {/* 글씨가 잘 보이도록 사진 위에 어두운 막을 덮습니다 */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+          </>
+        )}
+        <div className="relative mx-auto w-full max-w-6xl">
           <p className="font-semibold tracking-widest text-accent">PREMIUM FITNESS</p>
           <h1 className="mt-4 text-5xl leading-tight font-extrabold sm:text-7xl">
             {siteConfig.name}
@@ -39,14 +52,33 @@ export default function Home() {
             </div>
           ))}
         </div>
+        {gallery.length > 0 && (
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+            {gallery.map((src, i) => (
+              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-white/10">
+                <Image
+                  src={src}
+                  alt={`${siteConfig.name} 시설 사진 ${i + 1}`}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </Section>
 
       <Section id="programs" eyebrow="Programs" title="프로그램" className="bg-white/[0.03]">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((p) => (
             <div key={p.name} className="rounded-2xl border border-white/10 p-6">
-              {/* TODO: 실제 사진으로 교체 (public/images/...) */}
-              <div className="aspect-[4/3] rounded-xl bg-white/10" />
+              <Photo
+                name={p.image}
+                alt={`${p.name} 수업 사진`}
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                className="aspect-[4/3] rounded-xl"
+              />
               <h3 className="mt-4 text-lg font-bold">{p.name}</h3>
               <p className="mt-2 text-sm text-white/70">{p.body}</p>
             </div>
@@ -58,7 +90,12 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-3">
           {trainers.map((t) => (
             <div key={t.name} className="overflow-hidden rounded-2xl border border-white/10">
-              <div className="aspect-[3/4] bg-white/10" />
+              <Photo
+                name={t.image}
+                alt={`${t.name} ${t.role}`}
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="aspect-[3/4]"
+              />
               <div className="p-5">
                 <p className="text-sm text-accent">{t.role}</p>
                 <h3 className="mt-1 text-xl font-bold">{t.name}</h3>
