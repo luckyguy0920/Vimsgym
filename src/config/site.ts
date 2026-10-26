@@ -5,6 +5,8 @@ export const siteConfig = {
   description:
     "1:1 PT, 그룹 클래스, 24시간 자유이용까지. 전문 트레이너와 함께 목표를 이루세요.",
   url: "https://vimsgym.vercel.app",
+  // 회원 후기 섹션 표시 여부. 실제 후기를 content.ts에 넣은 뒤 true로 바꾸세요.
+  showReviews: false,
   phone: "010-0000-0000",
   address: "서울특별시 ○○구 ○○로 00, 0층",
   // 지도 검색어. 보통 도로명 주소(층수 제외)나 "건물명 + 상호명"이 가장 정확합니다.
@@ -28,4 +30,4 @@ export const navItems = [
   { href: "#pricing", label: "가격" },
   { href: "#faq", label: "FAQ" },
   { href: "#location", label: "오시는 길" },
-] as const;
+].filter((item) => item.href !== "#reviews" || siteConfig.showReviews);

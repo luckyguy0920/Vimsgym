@@ -69,7 +69,7 @@ export default function Home() {
         )}
       </Section>
 
-      <Section id="programs" eyebrow="Programs" title="프로그램" className="bg-white/[0.03]">
+      <Section id="programs" eyebrow="Programs" title="프로그램">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((p) => (
             <div key={p.name} className="rounded-2xl border border-white/10 p-6">
@@ -106,30 +106,32 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="reviews" eyebrow="Reviews" title="회원 후기" className="bg-white/[0.03]">
-        <div className="grid gap-6 md:grid-cols-3">
-          {reviews.map((r) => (
-            <figure key={r.name + r.program} className="flex flex-col rounded-2xl border border-white/10 bg-black p-6">
-              <div className="flex items-center justify-between gap-3">
-                <p className="text-accent" aria-label={`별점 5점 만점에 ${r.rating}점`}>
-                  {"★".repeat(r.rating)}
-                  <span className="text-white/20">{"★".repeat(5 - r.rating)}</span>
-                </p>
-                {r.result && (
-                  <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent">
-                    {r.result}
-                  </span>
-                )}
-              </div>
-              <blockquote className="mt-4 flex-1 leading-relaxed text-white/80">“{r.body}”</blockquote>
-              <figcaption className="mt-6 text-sm">
-                <span className="font-bold">{r.name} 회원</span>
-                <span className="ml-2 text-white/50">{r.program}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </Section>
+      {siteConfig.showReviews && (
+        <Section id="reviews" eyebrow="Reviews" title="회원 후기">
+          <div className="grid gap-6 md:grid-cols-3">
+            {reviews.map((r) => (
+              <figure key={r.name + r.program} className="flex flex-col rounded-2xl border border-white/10 bg-black p-6">
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-accent" aria-label={`별점 5점 만점에 ${r.rating}점`}>
+                    {"★".repeat(r.rating)}
+                    <span className="text-white/20">{"★".repeat(5 - r.rating)}</span>
+                  </p>
+                  {r.result && (
+                    <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent">
+                      {r.result}
+                    </span>
+                  )}
+                </div>
+                <blockquote className="mt-4 flex-1 leading-relaxed text-white/80">“{r.body}”</blockquote>
+                <figcaption className="mt-6 text-sm">
+                  <span className="font-bold">{r.name} 회원</span>
+                  <span className="ml-2 text-white/50">{r.program}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Section id="pricing" eyebrow="Pricing" title="가격 안내">
         <div className="grid gap-6 sm:grid-cols-3">
@@ -152,7 +154,7 @@ export default function Home() {
         <p className="mt-6 text-sm text-white/50">* 가격은 프로모션에 따라 변동될 수 있습니다.</p>
       </Section>
 
-      <Section id="faq" eyebrow="FAQ" title="자주 묻는 질문" className="bg-white/[0.03]">
+      <Section id="faq" eyebrow="FAQ" title="자주 묻는 질문">
         <div className="divide-y divide-white/10 rounded-2xl border border-white/10">
           {faqs.map((f) => (
             <details key={f.q} className="group p-5">
@@ -181,7 +183,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="location" eyebrow="Location" title="오시는 길" className="bg-white/[0.03]">
+      <Section id="location" eyebrow="Location" title="오시는 길">
         <div className="grid gap-8 md:grid-cols-2">
           <LocationMap />
           <div className="space-y-6">
