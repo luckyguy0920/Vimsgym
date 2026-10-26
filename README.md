@@ -7,7 +7,7 @@
 - **Next.js 16** (App Router) + **TypeScript**
 - **Tailwind CSS v4**
 - 폰트: Pretendard (CDN)
-- 배포: Vercel 권장 (GitHub 연결 → 자동 배포)
+- 배포: Vercel (https://vimsgym.vercel.app, `main` 푸시 시 자동 배포)
 
 ## 시작하기
 
@@ -56,5 +56,5 @@ Hero → 소개 → 프로그램 → 트레이너 → 가격 → FAQ → 오시�
 - [ ] 사진 추가 (Hero 배경, 프로그램, 트레이너, 시설 갤러리)
 - [ ] 네이버/카카오 지도 embed
 - [ ] OG 이미지(`src/app/opengraph-image.png`) 추가
-- [ ] 도메인 연결 후 `site.ts`의 `url` 변경
+- [x] 배포 주소(https://vimsgym.vercel.app)를 `site.ts`의 `url`에 반영 (커스텀 도메인 연결 시 다시 변경)
 - [ ] (선택) 상담 신청 폼, 후기 섹션, 네이버 예약 연동

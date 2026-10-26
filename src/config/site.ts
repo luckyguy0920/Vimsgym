@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "당신의 꿈을 현실로 만드는 공간",
   description:
     "1:1 PT, 그룹 클래스, 24시간 자유이용까지. 전문 트레이너와 함께 목표를 이루세요.",
-  url: "https://example.com",
+  url: "https://vimsgym.vercel.app",
   phone: "010-0000-0000",
   address: "서울특별시 ○○구 ○○로 00, 0층",
   hours: [
