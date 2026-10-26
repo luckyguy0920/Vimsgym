@@ -17,7 +17,6 @@ export const siteConfig = {
   links: {
     kakao: "https://pf.kakao.com/",
     instagram: "https://instagram.com/",
-    reservation: "https://booking.naver.com/",
   },
 } as const;
 

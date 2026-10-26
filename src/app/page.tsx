@@ -1,3 +1,4 @@
+import ConsultationForm from "@/components/ConsultationForm";
 import LocationMap from "@/components/LocationMap";
 import Section from "@/components/Section";
 import { siteConfig } from "@/config/site";
@@ -19,13 +20,8 @@ export default function Home() {
           <p className="mt-6 max-w-xl text-lg text-white/80">{siteConfig.tagline}</p>
           <p className="mt-2 max-w-xl text-white/60">{siteConfig.description}</p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href={siteConfig.links.reservation}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-accent px-6 py-3 font-semibold text-black"
-            >
-              무료 체험 예약
+            <a href="#contact" className="rounded-full bg-accent px-6 py-3 font-semibold text-black">
+              무료 체험 신청
             </a>
             <a href="#pricing" className="rounded-full border border-white/30 px-6 py-3 font-semibold">
               가격 보기
@@ -132,7 +128,23 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="location" eyebrow="Location" title="오시는 길">
+      <Section id="contact" eyebrow="Contact" title="상담 신청">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+          <div>
+            <p className="text-lg text-white/80">
+              남겨 주신 연락처로 트레이너가 직접 연락드려요.
+              <br />
+              첫 방문 시 체성분 분석과 무료 체험 PT를 받아보세요.
+            </p>
+            <a href={`tel:${siteConfig.phone}`} className="mt-6 inline-block text-2xl font-extrabold text-accent">
+              {siteConfig.phone}
+            </a>
+          </div>
+          <ConsultationForm />
+        </div>
+      </Section>
+
+      <Section id="location" eyebrow="Location" title="오시는 길" className="bg-white/[0.03]">
         <div className="grid gap-8 md:grid-cols-2">
           <LocationMap />
           <div className="space-y-6">
