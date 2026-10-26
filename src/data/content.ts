@@ -1,4 +1,5 @@
 // 섹션별 콘텐츠. 문구·가격·트레이너 정보는 여기서 수정합니다.
+// image: public/images 폴더에 올릴 사진 파일 이름 (확장자 제외, 예: program-pt.jpg)
 
 export const features = [
   { title: "최신 장비", body: "프리웨이트부터 머신까지 브랜드 장비를 넉넉하게 갖췄습니다." },
@@ -7,16 +8,16 @@ export const features = [
 ];
 
 export const programs = [
-  { name: "1:1 PT", body: "체성분 분석과 상담을 바탕으로 한 맞춤형 개인 트레이닝." },
-  { name: "그룹 PT", body: "2–4인 소그룹으로 부담은 낮추고 동기는 높이는 수업." },
-  { name: "필라테스", body: "코어 강화와 체형 교정을 위한 기구·매트 필라테스." },
-  { name: "자유이용", body: "원하는 시간에 자유롭게 이용하는 헬스 회원권." },
+  { name: "1:1 PT", image: "program-pt", body: "체성분 분석과 상담을 바탕으로 한 맞춤형 개인 트레이닝." },
+  { name: "그룹 PT", image: "program-group", body: "2–4인 소그룹으로 부담은 낮추고 동기는 높이는 수업." },
+  { name: "필라테스", image: "program-pilates", body: "코어 강화와 체형 교정을 위한 기구·매트 필라테스." },
+  { name: "자유이용", image: "program-free", body: "원하는 시간에 자유롭게 이용하는 헬스 회원권." },
 ];
 
 export const trainers = [
-  { name: "김OO", role: "대표 트레이너", specialty: "바디프로필 · 다이어트" },
-  { name: "이OO", role: "트레이너", specialty: "재활 · 체형교정" },
-  { name: "박OO", role: "필라테스 강사", specialty: "코어 · 유연성" },
+  { name: "김OO", image: "trainer-1", role: "대표 트레이너", specialty: "바디프로필 · 다이어트" },
+  { name: "이OO", image: "trainer-2", role: "트레이너", specialty: "재활 · 체형교정" },
+  { name: "박OO", image: "trainer-3", role: "필라테스 강사", specialty: "코어 · 유연성" },
 ];
 
 // TODO: 실제 회원 후기로 교체하세요. 아래는 레이아웃 확인용 예시입니다.
