@@ -25,6 +25,7 @@ export const navItems = [
   { href: "#about", label: "소개" },
   { href: "#programs", label: "프로그램" },
   { href: "#trainers", label: "트레이너" },
+  { href: "#reviews", label: "후기" },
   { href: "#pricing", label: "가격" },
   { href: "#faq", label: "FAQ" },
   { href: "#location", label: "오시는 길" },
