@@ -22,9 +22,7 @@ export default function Header() {
         </nav>
 
         <a
-          href={siteConfig.links.kakao}
-          target="_blank"
-          rel="noreferrer"
+          href="#contact"
           className="hidden rounded-full bg-accent px-4 py-2 text-sm font-semibold text-black md:inline-block"
         >
           상담 예약
