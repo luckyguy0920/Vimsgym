@@ -19,6 +19,31 @@ export const trainers = [
   { name: "박OO", role: "필라테스 강사", specialty: "코어 · 유연성" },
 ];
 
+// TODO: 실제 회원 후기로 교체하세요. 아래는 레이아웃 확인용 예시입니다.
+export const reviews = [
+  {
+    name: "김OO",
+    program: "1:1 PT · 3개월",
+    rating: 5,
+    result: "체지방 -7kg",
+    body: "운동이 처음이라 걱정했는데, 식단부터 자세까지 하나하나 잡아주셔서 꾸준히 다닐 수 있었어요.",
+  },
+  {
+    name: "이OO",
+    program: "필라테스 · 6개월",
+    rating: 5,
+    result: "허리 통증 개선",
+    body: "오래 앉아 일해서 허리가 늘 아팠는데, 코어 운동 덕분에 통증이 확실히 줄었어요.",
+  },
+  {
+    name: "박OO",
+    program: "헬스 자유이용 · 1년",
+    rating: 4,
+    result: "",
+    body: "장비가 넉넉해서 붐비는 시간에도 기다릴 일이 거의 없어요. 시설이 늘 깨끗한 것도 좋아요.",
+  },
+];
+
 export const pricing = [
   { name: "헬스 1개월", price: "70,000원", note: "자유이용", highlight: false },
   { name: "헬스 6개월", price: "300,000원", note: "월 50,000원 · 락커/운동복 포함", highlight: true },
