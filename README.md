@@ -47,7 +47,7 @@ Hero → 소개 → 프로그램 → 트레이너 → 가격 → FAQ → 오시�
 | --- | --- |
 | 상호명·전화·주소·운영시간·카톡/인스타 링크, 지도 검색어(`mapQuery`) | `src/config/site.ts` |
 | 프로그램·트레이너·가격·FAQ 문구 | `src/data/content.ts` |
-| 포인트 컬러 | `src/app/globals.css`의 `--accent` |
+| 포인트 컬러 (현재 주황 `#ff6b1a`) | `src/app/globals.css`의 `--accent`, `src/app/opengraph-image.tsx`의 `accent` |
 | 사진 | `public/images/`에 넣고 `page.tsx`의 회색 박스(TODO)를 `next/image`로 교체 |
 
 ## 다음 할 일 (TODO)

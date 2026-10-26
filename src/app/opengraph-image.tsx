@@ -11,7 +11,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 // globals.css의 --accent와 같은 값
-const accent = "#d4ff3f";
+const accent = "#ff6b1a";
 
 const fontDir = join(process.cwd(), "assets/fonts");
 const [extraBold, medium] = await Promise.all([
