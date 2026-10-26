@@ -22,3 +22,8 @@ body {
   font-family: var(--font-sans);
   word-break: keep-all;
 }
+
+/* 섹션 배경을 한 칸씩 번갈아 어둡게/밝게. 섹션을 숨기거나 추가해도 자동으로 맞춰집니다. */
+main > section:nth-of-type(odd):not(#top) {
+  background-color: rgb(255 255 255 / 0.03);
+}

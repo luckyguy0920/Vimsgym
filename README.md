@@ -43,6 +43,8 @@ src/
 
 Hero → 소개 → 프로그램 → 트레이너 → 회원 후기 → 가격 → FAQ → 상담 신청 → 오시는 길
 
+회원 후기는 `site.ts`의 `showReviews`로 켜고 끕니다. 섹션 배경은 자동으로 번갈아 칠해집니다.
+
 ## 내용 수정 방법
 
 | 바꾸고 싶은 것 | 파일 |
@@ -59,7 +61,7 @@ Hero → 소개 → 프로그램 → 트레이너 → 회원 후기 → 가격 �
 - [x] 지도 (Google 지도 임베드 + 네이버/카카오맵 버튼, `mapQuery`로 위치 지정)
 - [x] 공유 미리보기 이미지 (`src/app/opengraph-image.tsx`, site.ts 문구로 자동 생성)
 - [x] 배포 주소(https://vimsgym.vercel.app)를 `site.ts`의 `url`에 반영 (커스텀 도메인 연결 시 다시 변경)
-- [x] 회원 후기 섹션 (현재 예시 후기 → `content.ts`의 `reviews`를 실제 후기로 교체 필요)
+- [ ] 회원 후기: 지금은 숨김 상태. `content.ts`의 `reviews`를 실제 후기로 바꾼 뒤 `site.ts`의 `showReviews`를 `true`로
 - [x] 상담 신청 폼 (이메일 설정 필요 → 아래 참고)
 - [ ] (선택) 네이버 예약 연동
 
